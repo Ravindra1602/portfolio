@@ -1,0 +1,12 @@
+{
+  "name": "ravindra-portfolio",
+  "version": "1.0.0",
+  "description": "Academic Portfolio for Er. Andukuri Ravindra",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
