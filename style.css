@@ -1,79 +1,95 @@
-/* Professional Sticky Navigation Core Layout */
+/* ==========================================================================
+   FIXED STICKY NAVIGATION BAR OVERRIDES 
+   ========================================================================== */
+
+/* The Main Bar Container */
 .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 70px;               /* Standard professional height */
-    z-index: 9999;              /* Layers it smoothly on top of graphics */
-    background-color: #0b132b;  /* Adjusted to match your dark-blue brand look */
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08); /* Clean shadow depth split */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 4%;
-    box-sizing: border-box;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 70px !important;            /* Safe standard height */
+    background-color: #0b132b !important; /* Your deep dark blue brand color */
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.15) !important;
+    z-index: 99999 !important;          /* Keeps it cleanly floating on top of everything */
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 0 4% !important;
+    box-sizing: border-box !important;
 }
 
-/* Compensate the main content grid wrapper so your text isn't hidden under the bar */
+/* Page spacing correction to prevent content from slipping under navbar */
 body {
-    padding-top: 70px;          /* Matches navbar height exactly */
+    padding-top: 70px !important;       /* Matches navbar height precisely */
 }
 
-/* BRAND LOGO AREA FIX */
+/* Brand Logo Area Alignment */
 .navbar .logo {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    height: 100%;
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    height: 100% !important;
+}
+
+.navbar .logo a {
+    display: flex !important;
+    align-items: center !important;
+    text-decoration: none !important;
 }
 
 .navbar .logo img {
-    height: 40px;               /* Constrains your logo image within the 70px bar */
-    width: auto;
-    display: block;
+    height: 40px !important;            /* Safely limits logo inside the 70px bar */
+    width: auto !important;
+    display: block !important;
 }
 
 .navbar .logo-text {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 1.15rem;
-    white-space: nowrap;
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    font-size: 1.15rem !important;
+    white-space: nowrap !important;
+    font-family: sans-serif;
 }
 
-/* FLEX BOX NAV LINKS MATRIX (The missing link fixing your layout bug) */
+/* Horizontal Link Menu Configuration (Fixes the vertical overflow text drop) */
 .nav-links {
-    display: flex;
-    align-items: center;        /* Keeps your text perfectly centered vertically */
-    gap: 18px;                  /* Balances spacing evenly between items */
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    height: 100%;               /* Forces tracking within the parent layout container */
+    display: flex !important;
+    flex-direction: row !important;     /* Forces links onto a strict horizontal layout */
+    align-items: center !important;     /* Vertically centers all text items */
+    gap: 20px !important;               /* Uniform spacing between menu options */
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    height: 100% !important;
 }
 
 .nav-links li {
-    display: flex;
-    align-items: center;
-    height: 100%;
+    display: flex !important;
+    align-items: center !important;
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
+/* The Navigation Links Text styling */
 .nav-links a {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 0.88rem;         /* Slightly optimized for longer multi-page link sets */
-    font-weight: 500;
-    white-space: nowrap;        /* CRITICAL: Prevents links from breaking into two lines */
-    transition: color 0.25s ease;
+    color: #ffffff !important;
+    text-decoration: none !important;
+    font-size: 0.85rem !important;       /* Clean, optimized scale size for all options */
+    font-weight: 500 !important;
+    white-space: nowrap !important;     /* STOP links from wrapping into 2 messy lines */
+    transition: color 0.25s ease !important;
+    font-family: sans-serif;
 }
 
+/* Interactive Hover Feedback State */
 .nav-links a:hover {
-    color: #00b4d8;            /* Smooth hover effect matching your brand accent blue */
+    color: #00b4d8 !important;          /* Clean bright cyan contrast hue response */
 }
 
-/* Highlighting the active link indicator for your dedicated pages */
+/* Highlight Indicator for Active Multi-page files */
 .nav-links a.active {
-    color: #00b4d8;            
-    font-weight: 700;
+    color: #00b4d8 !important;            
+    font-weight: 700 !important;
 }
