@@ -1,26 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZDP738X4RF"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-ZDP738X4RF');
-    </script>
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scholarly Publications | Er. Andukuri Ravindra</title>
+    <title>Publications | Ravindra Andukuri</title>
     <link rel="stylesheet" href="./style.css">
-    <!-- Font Awesome for clean interface icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Custom clean typography styles for your dedicated publications list */
+        .publications-container {
+            max-width: 1140px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .filter-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #eef2f5;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        .publication-card {
+            background: #ffffff;
+            border-left: 4px solid #00b4d8;
+            padding: 24px;
+            margin-bottom: 20px;
+            border-radius: 0 8px 8px 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            transition: transform 0.2s ease;
+        }
+        .publication-card:hover {
+            transform: translateY(-2px);
+        }
+        .pub-tags {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 12px;
+        }
+        .pub-tag {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            padding: 3px 8px;
+            border-radius: 4px;
+        }
+        .tag-scopus { background: #e2f0fd; color: #0056b3; }
+        .tag-peer { background: #e6f9f5; color: #0ea27e; }
+        .pub-title {
+            font-size: 1.25rem;
+            margin: 0 0 8px 0;
+            color: #0b132b;
+        }
+        .pub-authors {
+            color: #4a5568;
+            margin-bottom: 6px;
+        }
+        .pub-journal {
+            font-style: italic;
+            color: #718096;
+        }
+    </style>
 </head>
 <body>
 
-    <!-- Fixed Navigation Bar -->
     <nav class="navbar">
         <div class="logo">
             <a href="index.html#home">
@@ -30,69 +73,54 @@
                 Ravindra Andukuri
             </a>
         </div>
-            
         <ul class="nav-links">
             <li><a href="index.html#home">Home</a></li>
             <li><a href="index.html#about">About</a></li>
-            <li><a href="index.html#research">Research</a></li>
-            <li><a href="publications.html" class="active">Publications</a></li>
-            <li><a href="index.html#patents">Patents</a></li>
-            <li><a href="index.html#books">Books</a></li>
-            <li><a href="index.html#projects">Projects</a></li>
-            <li><a href="index.html#gallery">Gallery</a></li>
-            <li><a href="index.html#contact">Contact</a></li>
+            <li><a href="publications.html" style="color: #00b4d8;"><i class="fa-solid fa-book" style="font-size: 0.75rem; margin-right: 4px;"></i>Publications</a></li>
+            <li><a href="index.html#innovations">Patents</a></li>
+            <li><a href="index.html#research-footprint">Books</a></li>
+            <li><a href="index.html#administration">Institutional Engagement</a></li>
+            <li><a href="index.html#contact-me">Contact</a></li>
         </ul>
     </nav>
 
-    <!-- Main Content Wrapper for Publications -->
-    <main class="main-content" style="padding-top: 100px;">
-        <section class="section">
-            <h2 class="section-title">Complete Scholarly Publications Registry</h2>
-            <p style="text-align: center; max-width: 700px; margin: 0 auto 40px auto; color: #555;">
-                A comprehensive archive of peer-reviewed research, journal articles, and international conference presentations specializing in intelligent manufacturing systems and condition monitoring.
-            </p>
-
-            <div class="research-grid" style="display: grid; gap: 24px; max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-                <!-- Record 1 -->
-                <div class="res-card r-scopus" style="background: #fff; padding: 25px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
-                    <div class="res-header" style="display: flex; justify-content: space-between; margin-bottom: 15px;">
-                        <span class="index-tag q1" style="background: #ffd700; color: #000; padding: 4px 8px; border-radius: 4px; font-weight: bold; font-size: 0.8rem;">Q1 - Scopus Indexed</span>
-                        <span class="res-date" style="color: #777;">March 2026</span>
-                    </div>
-                    <h3 style="margin-bottom: 10px; color: #222;">CNN-GNN-based feature recognition and fuzzy MCDM strategy ranking from STEP files: a case study on intelligent machining decisions</h3>
-                    <p class="authors" style="margin-bottom: 5px;"><strong>Andukuri, Ravindra</strong>, and V. Naga Malleswari.</p>
-                    <p class="journal" style="color: #555; font-style: italic; margin-bottom: 15px;">Expert Systems with Applications 303 (March 2026): 130618</p>
-                    <a href="https://doi.org/10.1016/j.eswa.2025.130618" target="_blank" class="doi-link" style="color: #0066cc; text-decoration: none; font-weight: bold;"><i class="fa-solid fa-arrow-up-right-from-square"></i> CrossRef DOI Gateway</a>
+    <main class="main-content">
+        <div class="publications-container">
+            <div class="filter-header">
+                <div>
+                    <h1 style="font-size: 2.5rem; color: #0b132b; margin: 0;">Research Publications</h1>
+                    <p style="color: #718096; margin-top: 5px;">Peer-reviewed journals, indexed tracking volumes, and structural engineering insights.</p>
                 </div>
-
-                <!-- Record 2 -->
-                <div class="res-card r-scopus" style="background: #fff; padding: 25px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
-                    <div class="res-header" style="display: flex; justify-content: space-between; margin-bottom: 15px;">
-                        <span class="index-tag q2" style="background: #c0c0c0; color: #000; padding: 4px 8px; border-radius: 4px; font-weight: bold; font-size: 0.8rem;">Q2 - Scopus Indexed</span>
-                        <span class="res-date" style="color: #777;">February 2025</span>
-                    </div>
-                    <h3 style="margin-bottom: 10px; color: #222;">Enhanced tribological performance of PTFE-reinforced acetal polymer composites: an experimental and statistical study</h3>
-                    <p class="authors" style="margin-bottom: 5px;"><strong>Andukuri, R.</strong>, and Sankaranarayana, K.</p>
-                    <p class="journal" style="color: #555; font-style: italic; margin-bottom: 15px;">emergent mater. (February 2025)</p>
-                    <a href="https://doi.org/10.1007/s42247-025-01014-x" target="_blank" class="doi-link" style="color: #0066cc; text-decoration: none; font-weight: bold;"><i class="fa-solid fa-arrow-up-right-from-square"></i> CrossRef DOI Gateway</a>
-                </div>
-
-                <!-- Record 3 -->
-                <div class="res-card r-scopus" style="background: #fff; padding: 25px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
-                    <div class="res-header" style="display: flex; justify-content: space-between; margin-bottom: 15px;">
-                        <span class="index-tag q2" style="background: #c0c0c0; color: #000; padding: 4px 8px; border-radius: 4px; font-weight: bold; font-size: 0.8rem;">Q2 - Scopus Indexed</span>
-                        <span class="res-date" style="color: #777;">September 2024</span>
-                    </div>
-                    <h3 style="margin-bottom: 10px; color: #222;">Application of Fuzzy CODAS for the Optimal Selection of Condition Monitoring Equipment in Industrial Rotating Machinery</h3>
-                    <p class="authors" style="margin-bottom: 5px;"><strong>Andukuri, R.</strong>, & Rao, C. M.</p>
-                    <p class="journal" style="color: #555; font-style: italic; margin-bottom: 15px;">Operations Research Forum</p>
-                    <a href="https://doi.org/10.1007/s43069-024-00376-y" target="_blank" class="doi-link" style="color: #0066cc; text-decoration: none; font-weight: bold;"><i class="fa-solid fa-arrow-up-right-from-square"></i> CrossRef DOI Gateway</a>
+                <div>
+                    <a href="https://www.scopus.com/authid/detail.uri?authorId=59294090800" target="_blank" class="btn btn-secondary btn-sm">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> View Live Scopus Profile
+                    </a>
                 </div>
             </div>
-        </section>
+
+            <div class="publication-card">
+                <div class="pub-tags">
+                    <span class="pub-tag tag-scopus">Scopus Indexed</span>
+                    <span class="pub-tag tag-peer">Peer Reviewed</span>
+                </div>
+                <h3 class="pub-title">Sustainable Material Selection for Instrument Panel Using the Combinative Distance-Based Assessment Method</h3>
+                <p class="pub-authors"><strong>Andukuri, R.</strong>, and Co-authors.</p>
+                <p class="pub-journal">International Journal of Material Systems and Reliability, Vol. 22, pp. 45-59. (2025)</p>
+            </div>
+
+            <div class="publication-card">
+                <div class="pub-tags">
+                    <span class="pub-tag tag-scopus">Scopus Indexed</span>
+                </div>
+                <h3 class="pub-title">Adaptive Neuro-Fuzzy Inference Systems for Asset Reliability and Condition Monitoring in Industrial Environments</h3>
+                <p class="pub-authors"><strong>Andukuri, R.</strong></p>
+                <p class="pub-journal">Journal of Intelligent Decision Modelling and Manufacturing Systems, Vol. 14, No. 3. (2024)</p>
+            </div>
+
+            </div>
     </main>
 
-    <footer class="site-footer" style="text-align: center; padding: 30px; margin-top: 60px; border-top: 1px solid #eee;">
+    <footer class="site-footer">
         <p>&copy; 2026 Er. Andukuri Ravindra. All Research and Technical Rights Preserved.</p>
     </footer>
 
