@@ -5,68 +5,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Books - Ravindra Andukuri</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        .container { padding: 50px 6%; font-family: 'Poppins', sans-serif; color: #fff; background-color: #0b132b; min-height: 100vh; box-sizing: border-box; }
-        .page-title { font-size: 2.2rem; font-weight: 700; margin-bottom: 10px; color: #00b4d8; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 25px; margin-top: 30px; }
-        .book-card { background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.08); padding: 25px; border-radius: 8px; display: flex; flex-direction: column; justify-content: space-between; }
-        .book-title { font-size: 1.15rem; font-weight: 600; color: #fff; margin: 0 0 10px 0; line-height: 1.4; }
-        .book-meta { font-size: 0.85rem; color: #aaa; margin-bottom: 20px; line-height: 1.5; }
-        .btn { display: inline-block; background: #00b4d8; color: #0b132b; text-decoration: none; padding: 8px 16px; border-radius: 4px; font-size: 0.85rem; font-weight: 700; text-align: center; width: fit-content; }
-        .btn:hover { background: #0096b4; }
+        .books-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 25px; margin-top: 10px; }
     </style>
 </head>
-<body>
+<body class="sub-page-body">
 
-<nav class="portfolio-navbar">
-    <a href="index.html#home" class="logo-area">
-        <img src="Logo Ravindra.png" alt="Logo">
-        <span class="logo-title">Ravindra Andukuri</span>
-    </a>
-    <ul class="portfolio-nav-links">
-        <li><a href="index.html#home">Home</a></li>
-        <li><a href="index.html#about">About</a></li>
-        <li><a href="index.html#research">Research</a></li>
-        <li><a href="publications.html">Publications</a></li>
-        <li><a href="patents.html">Patents</a></li>
-        <li><a href="books.html" class="active">Books</a></li>
-        <li><a href="index.html#projects">Projects</a></li>
-        <li><a href="index.html#gallery">Gallery</a></li>
-        <li><a href="index.html#contact-me">Contact</a></li>
-    </ul>
-</nav>
-    <div class="container">
-        <h1 class="page-title">Published Books & Monographs</h1>
-        <p style="color: #ccc;">Academic textbook volumes and international research monograph prints cataloged with ISBN records[cite: 144, 149].</p>
+    <nav class="portfolio-navbar">
+        <a href="index.html#home" class="logo-area">
+            <img src="Logo Ravindra.png" alt="Logo">
+            <span class="logo-title">Ravindra Andukuri</span>
+        </a>
+        <ul class="portfolio-nav-links">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#research">Research</a></li>
+            <li><a href="publications.html">Publications</a></li>
+            <li><a href="patents.html">Patents</a></li>
+            <li><a href="books.html" class="active">Books</a></li>
+            <li><a href="index.html#projects">Projects</a></li>
+            <li><a href="index.html#gallery">Gallery</a></li>
+            <li><a href="index.html#contact-me">Contact</a></li>
+        </ul>
+    </nav>
 
-        <div class="grid">
-            <div class="book-card">
+    <div class="sub-page-container">
+        <h1 class="sub-page-header">Published Books & Monographs</h1>
+        <p class="sub-page-desc">Academic textbook items and international monographs registered with indexed ISBN tracking[cite: 144].</p>
+
+        <div class="books-grid">
+            <div class="portfolio-data-card" style="margin-bottom: 0;">
                 <div>
-                    <h4 class="book-title">Sustainable Material Selection for Instrument Panel Using the Combinative Distance-Based Assessment Method...</h4>
-                    <p class="book-meta">Walnut Publication<br><strong>ISBN:</strong> 978-9359113777 (Jan 2025) [cite: 153]</p>
+                    <span class="portfolio-card-tag">MCDM Textbook Monograph</span>
+                    <h4 class="portfolio-card-title" style="font-size: 1.15rem;">Sustainable Material Selection for Instrument Panel Using the Combinative Distance-Based Assessment Method...</h4>
+                    <p class="portfolio-card-meta">Walnut Publication [cite: 153]<br><strong>ISBN:</strong> 978-9359113777 (Jan 2025) [cite: 153]</p>
                 </div>
-                <a class="btn" href="https://walnutpublication.com/books/" target="_blank">View Publication</a>
+                <a class="portfolio-card-btn" href="https://walnutpublication.com/books/" target="_blank">View Publication Website →</a>
             </div>
 
-            <div class="book-card">
+            <div class="portfolio-data-card" style="margin-bottom: 0;">
                 <div>
-                    <h4 class="book-title">20 High-Scoring Mechanical Engineering Project Ideas with Industry-Ready Insights</h4>
-                    <p class="book-meta">Amazon Kindle Direct Publishing<br><strong>ASIN:</strong> B0FBKK5RTP (May 2025) [cite: 154, 156]</p>
+                    <span class="portfolio-card-tag">Engineering Design Series</span>
+                    <h4 class="portfolio-card-title" style="font-size: 1.15rem;">20 High-Scoring Mechanical Engineering Project Ideas with Industry-Ready Insights</h4>
+                    <p class="portfolio-card-meta">Amazon Kindle Direct Publishing [cite: 156]<br><strong>ASIN:</strong> B0FBKK5RTP (May 2025) [cite: 156]</p>
                 </div>
-                <a class="btn" href="https://www.amazon.in/dp/B0FBKK5RTP" target="_blank">Buy on Amazon</a>
+                <a class="portfolio-card-btn" href="https://www.amazon.in/dp/B0FBKK5RTP" target="_blank">Buy on Amazon →</a>
             </div>
 
-            <div class="book-card">
+            <div class="portfolio-data-card" style="margin-bottom: 0;">
                 <div>
-                    <h4 class="book-title">Optimization Of Additive Manufactured Lattice Structure</h4>
-                    <p class="book-meta">Lambert Academic Publications, Germany<br><strong>ISBN:</strong> 978-620-4-98305-9 (2022) [cite: 157]</p>
+                    <span class="portfolio-card-tag">International Monograph</span>
+                    <h4 class="portfolio-card-title" style="font-size: 1.15rem;">Optimization Of Additive Manufactured Lattice Structure</h4>
+                    <p class="portfolio-card-meta">Lambert Academic Publications, Germany [cite: 157]<br><strong>ISBN:</strong> 978-620-4-98305-9 (2022) [cite: 157]</p>
                 </div>
             </div>
 
-            <div class="book-card">
+            <div class="portfolio-data-card" style="margin-bottom: 0;">
                 <div>
-                    <h4 class="book-title">Rotor Dynamic Performance In Turbo Machinery Refurbishment</h4>
-                    <p class="book-meta">Lambert Academic Publications, Germany<br><strong>ISBN:</strong> 978-620-4-97901-4 (2022)<br><em>*Translated and published in 7 international languages</em> [cite: 158, 159]</p>
+                    <span class="portfolio-card-tag">7 Language Translations</span>
+                    <h4 class="portfolio-card-title" style="font-size: 1.15rem;">Rotor Dynamic Performance In Turbo Machinery Refurbishment</h4>
+                    <p class="portfolio-card-meta">Lambert Academic Publications, Germany [cite: 158]<br><strong>ISBN:</strong> 978-620-4-97901-4 (2022) [cite: 158]<br><em>*Translated and distributed globally across 7 languages[cite: 159].</em></p>
                 </div>
             </div>
         </div>
