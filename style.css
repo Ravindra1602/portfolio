@@ -73,3 +73,85 @@ body {
     color: #00b4d8 !important; /* Smooth neon accent blue response */
     font-weight: 700 !important;
 }
+
+/* ==========================================================================
+   ISOLATED PORTFOLIO NAVIGATION BAR (Safe from breaking other elements)
+   ========================================================================== */
+
+/* Main layout wrapper */
+.portfolio-navbar {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 70px !important;
+    background-color: #0b132b !important; /* Premium Dark Navy */
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.15) !important;
+    z-index: 99999 !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 0 4% !important;
+    box-sizing: border-box !important;
+}
+
+/* Safe spacing adjustment so content doesn't hide under the navigation bar */
+body {
+    margin-top: 70px !important; 
+}
+
+/* Logo layout rules */
+.portfolio-navbar .logo-area {
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    text-decoration: none !important;
+}
+
+.portfolio-navbar .logo-area img {
+    height: 40px !important;
+    width: auto !important;
+    display: block !important;
+}
+
+.portfolio-navbar .logo-title {
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    font-size: 1.2rem !important;
+    white-space: nowrap !important;
+    font-family: 'Poppins', sans-serif !important;
+}
+
+/* Exact requested structural link matrix */
+.portfolio-nav-links {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 18px !important; /* Balances look for long multi-page headers */
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.portfolio-nav-links li {
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.portfolio-nav-links a {
+    color: #ffffff !important;
+    text-decoration: none !important;
+    font-size: 0.85rem !important;
+    font-weight: 500 !important;
+    white-space: nowrap !important; /* Strictly prevents text from dropping to a second line */
+    transition: color 0.25s ease !important;
+    font-family: 'Poppins', sans-serif !important;
+}
+
+/* Hover and Active highlights */
+.portfolio-nav-links a:hover,
+.portfolio-nav-links a.active {
+    color: #00b4d8 !important; /* Vibrant Cyan */
+    font-weight: 700 !important;
+}
