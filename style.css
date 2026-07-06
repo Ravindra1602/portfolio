@@ -407,3 +407,182 @@ body {
     background-color: #00b4d8;
     color: #0b132b;
 }
+
+/* ==========================================================================
+   UNIFIED PORTFOLIO NAVIGATION MASTER ARCHITECTURE & PROFESSIONAL BLUE THEME
+   ========================================================================== */
+
+/* Isolated Navigation Bar Styles */
+.portfolio-navbar {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 70px !important;
+    background-color: #0b132b !important; /* Premium Dark Blue */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2) !important;
+    z-index: 99999 !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 0 5% !important;
+    box-sizing: border-box !important;
+    font-family: 'Poppins', sans-serif !important;
+}
+
+body {
+    padding-top: 70px !important; /* Prevents content from hiding under the fixed bar */
+}
+
+/* Logo Layout Rules */
+.portfolio-navbar .logo-area {
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    text-decoration: none !important;
+}
+
+.portfolio-navbar .logo-area img {
+    height: 42px !important;
+    width: auto !important;
+    display: block !important;
+}
+
+.portfolio-navbar .logo-title {
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    font-size: 1.25rem !important;
+    white-space: nowrap !important;
+}
+
+/* Exact Rearranged Menu Matrix (Projects & Gallery Completely Removed) */
+.portfolio-nav-links {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 24px !important; /* Spacious gap for the streamlined header */
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.portfolio-nav-links li {
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.portfolio-nav-links a {
+    color: #ffffff !important;
+    text-decoration: none !important;
+    font-size: 0.9rem !important;
+    font-weight: 500 !important;
+    white-space: nowrap !important; /* Stops text from wrapping or dropping to a second line */
+    transition: color 0.25s ease-in-out !important;
+}
+
+/* Hover and Active Indicators */
+.portfolio-nav-links a:hover,
+.portfolio-nav-links a.active {
+    color: #00b4d8 !important; /* Vibrant Cyan Accent */
+    font-weight: 700 !important;
+}
+
+/* ==========================================================================
+   UNIFIED INNER-PAGE BACKGROUNDS AND TYPOGRAPHY MIGRATION
+   ========================================================================== */
+.sub-page-body {
+    background-color: #0b132b !important; /* Enforces executive dark-blue canvas match */
+    color: #ffffff !important;
+    font-family: 'Poppins', sans-serif !important;
+    margin: 0;
+}
+
+.sub-page-container {
+    padding: 60px 6% !important;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.sub-page-header {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #00b4d8; /* Cyan accent header title */
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+}
+
+.sub-page-desc {
+    color: #a0aec0;
+    font-size: 1rem;
+    margin-bottom: 40px;
+}
+
+/* Clear Professional Data Layout Components */
+.portfolio-data-card {
+    background: rgba(255, 255, 255, 0.03) !important;
+    border: 1px solid rgba(255, 255, 255, 0.07) !important;
+    border-left: 4px solid #00b4d8 !important; /* Blue brand vertical border line */
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    transition: transform 0.2s ease, background 0.2s ease !important;
+}
+
+.portfolio-data-card:hover {
+    transform: translateY(-3px);
+    background: rgba(255, 255, 255, 0.06) !important;
+}
+
+.portfolio-card-tag {
+    display: inline-block;
+    background: #00b4d8;
+    color: #0b132b;
+    padding: 4px 10px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    border-radius: 4px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.portfolio-card-title {
+    margin: 0 0 10px 0;
+    font-size: 1.35rem;
+    color: #ffffff;
+    line-height: 1.4;
+}
+
+.portfolio-card-meta {
+    margin: 0;
+    color: #cbd5e1;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.portfolio-card-btn {
+    display: inline-block;
+    margin-top: 15px;
+    background-color: transparent;
+    color: #00b4d8;
+    border: 1px solid #00b4d8;
+    text-decoration: none;
+    padding: 6px 14px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: background 0.2s, color 0.2s;
+}
+
+.portfolio-card-btn:hover {
+    background-color: #00b4d8;
+    color: #0b132b;
+}
+
+.books-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); 
+    gap: 25px; 
+    margin-top: 10px; 
+}
