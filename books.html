@@ -3,12 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Books & Monographs - Ravindra Andukuri</title>
+    <title>Books - Ravindra Andukuri</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        .container { padding: 40px 6%; font-family: sans-serif; color: #333; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; margin-top: 20px; }
-        .book-card { background: #fff; border: 1px solid #ddd; padding: 20px; border-radius: 6px; text-align: left; display: flex; flex-direction: column; justify-content: space-between; }
+        .container { padding: 50px 6%; font-family: 'Poppins', sans-serif; color: #fff; background-color: #0b132b; min-height: 100vh; box-sizing: border-box; }
+        .page-title { font-size: 2.2rem; font-weight: 700; margin-bottom: 10px; color: #00b4d8; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 25px; margin-top: 30px; }
+        .book-card { background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.08); padding: 25px; border-radius: 8px; display: flex; flex-direction: column; justify-content: space-between; }
+        .book-title { font-size: 1.15rem; font-weight: 600; color: #fff; margin: 0 0 10px 0; line-height: 1.4; }
+        .book-meta { font-size: 0.85rem; color: #aaa; margin-bottom: 20px; line-height: 1.5; }
+        .btn { display: inline-block; background: #00b4d8; color: #0b132b; text-decoration: none; padding: 8px 16px; border-radius: 4px; font-size: 0.85rem; font-weight: 700; text-align: center; width: fit-content; }
+        .btn:hover { background: #0096b4; }
     </style>
 </head>
 <body>
@@ -16,52 +21,53 @@
     <nav class="navbar">
         <div class="logo">
             <img src="Logo Ravindra.png" alt="Logo">
-            <a href="index.html" class="logo-text">Ravindra Andukuri</a>
+            <a href="index.html#home" class="logo-text">Ravindra Andukuri</a>
         </div>
         <ul class="nav-links">
             <li><a href="index.html#home">Home</a></li>
             <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#research">Research</a></li>
             <li><a href="publications.html">Publications</a></li>
             <li><a href="patents.html">Patents</a></li>
             <li><a href="books.html" class="active">Books</a></li>
-            <li><a href="index.html#administration">Institutional Engagement</a></li>
+            <li><a href="index.html#projects">Projects</a></li>
+            <li><a href="index.html#gallery">Gallery</a></li>
             <li><a href="index.html#contact-me">Contact</a></li>
         </ul>
     </nav>
 
     <div class="container">
-        <h2>Published Books & Academic Monographs</h2>
-        <p>International monographs cataloged with registered ISBN reference tracking parameters[cite: 144, 149].</p>
-        <hr>
+        <h1 class="page-title">Published Books & Monographs</h1>
+        <p style="color: #ccc;">Academic textbook volumes and international research monograph prints cataloged with ISBN records[cite: 144, 149].</p>
 
         <div class="grid">
             <div class="book-card">
                 <div>
-                    <h4>Sustainable Material Selection for Instrument Panel Using the Combinative Distance-Based Assessment Method...</h4>
-                    <p><small>Walnut Publication (Jan 2025)<br><strong>ISBN:</strong> 978-9359113777</small></p> [cite: 152, 153]
+                    <h4 class="book-title">Sustainable Material Selection for Instrument Panel Using the Combinative Distance-Based Assessment Method...</h4>
+                    <p class="book-meta">Walnut Publication<br><strong>ISBN:</strong> 978-9359113777 (Jan 2025) [cite: 153]</p>
                 </div>
-                <a href="https://walnutpublication.com/books/" target="_blank">View Book</a> [cite: 153]
+                <a class="btn" href="https://walnutpublication.com/books/" target="_blank">View Publication</a>
             </div>
 
             <div class="book-card">
                 <div>
-                    <h4>20 High-Scoring Mechanical Engineering Project Ideas with Industry-Ready Insights</h4>
-                    <p><small>Amazon KDP (May 2025)<br><strong>ASIN:</strong> B0FBKK5RTP</small></p> [cite: 154, 156]
+                    <h4 class="book-title">20 High-Scoring Mechanical Engineering Project Ideas with Industry-Ready Insights</h4>
+                    <p class="book-meta">Amazon Kindle Direct Publishing<br><strong>ASIN:</strong> B0FBKK5RTP (May 2025) [cite: 154, 156]</p>
                 </div>
-                <a href="https://www.amazon.in/dp/B0FBKK5RTP" target="_blank">View Book</a> [cite: 156]
+                <a class="btn" href="https://www.amazon.in/dp/B0FBKK5RTP" target="_blank">Buy on Amazon</a>
             </div>
 
             <div class="book-card">
                 <div>
-                    <h4>Optimization Of Additive Manufactured Lattice Structure</h4>
-                    <p><small>Lambert Academic Publications (2022)<br><strong>ISBN:</strong> 978-620-4-98305-9</small></p> [cite: 157]
+                    <h4 class="book-title">Optimization Of Additive Manufactured Lattice Structure</h4>
+                    <p class="book-meta">Lambert Academic Publications, Germany<br><strong>ISBN:</strong> 978-620-4-98305-9 (2022) [cite: 157]</p>
                 </div>
             </div>
 
             <div class="book-card">
                 <div>
-                    <h4>Rotor Dynamic Performance In Turbo Machinery Refurbishment</h4>
-                    <p><small>Lambert Academic Publications (2022)<br><em>Translated in 7 International Languages</em></small></p> [cite: 158, 159]
+                    <h4 class="book-title">Rotor Dynamic Performance In Turbo Machinery Refurbishment</h4>
+                    <p class="book-meta">Lambert Academic Publications, Germany<br><strong>ISBN:</strong> 978-620-4-97901-4 (2022)<br><em>*Translated and published in 7 international languages</em> [cite: 158, 159]</p>
                 </div>
             </div>
         </div>
