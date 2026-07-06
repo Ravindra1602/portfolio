@@ -1,115 +1,41 @@
 /* ==========================================================================
-   ROBUST GLOBAL NAV FIXES (Prevents breaking, disappearing, or vertical drops)
-   ========================================================================== */
-.navbar {
-    position: fixed !important;
-    top: 0 !important;
-    left: 0 !important;
-    width: 100% !important;
-    height: 70px !important;
-    background-color: #0b132b !important; /* Premium dark blue brand theme */
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.15) !important;
-    z-index: 99999 !important;
-    display: flex !important;
-    justify-content: space-between !important;
-    align-items: center !important;
-    padding: 0 4% !important;
-    box-sizing: border-box !important;
-}
-
-body {
-    padding-top: 70px !important; /* Prevents hero element content overlap */
-}
-
-.navbar .logo {
-    display: flex !important;
-    align-items: center !important;
-    gap: 12px !important;
-}
-
-.navbar .logo img {
-    height: 40px !important;
-    width: auto !important;
-}
-
-.navbar .logo-text {
-    color: #ffffff !important;
-    text-decoration: none !important;
-    font-weight: 700 !important;
-    font-size: 1.15rem !important;
-    white-space: nowrap !important;
-    font-family: 'Poppins', sans-serif;
-}
-
-/* HORIZONTAL MATRIX ALIGNMENT */
-.nav-links {
-    display: flex !important;
-    flex-direction: row !important;
-    align-items: center !important;
-    gap: 22px !important; /* Perfectly balances width with your long menu options */
-    list-style: none !important;
-    margin: 0 !important;
-    padding: 0 !important;
-}
-
-.nav-links li {
-    display: block !important;
-    margin: 0 !important;
-    padding: 0 !important;
-}
-
-.nav-links a {
-    color: #ffffff !important;
-    text-decoration: none !important;
-    font-size: 0.88rem !important;
-    font-weight: 500 !important;
-    white-space: nowrap !important; /* CRITICAL: Stops text links from jumping down */
-    transition: color 0.25s ease !important;
-    font-family: 'Poppins', sans-serif;
-}
-
-.nav-links a:hover,
-.nav-links a.active {
-    color: #00b4d8 !important; /* Smooth neon accent blue response */
-    font-weight: 700 !important;
-}
-
-/* ==========================================================================
-   ISOLATED PORTFOLIO NAVIGATION BAR (Safe from breaking other elements)
+   10/10 ULTIMATE PORTFOLIO NAVIGATION BAR & BLUE THEME ARCHITECTURE
    ========================================================================== */
 
-/* Main layout wrapper */
+/* Fixed Top Menu Configuration */
 .portfolio-navbar {
     position: fixed !important;
     top: 0 !important;
     left: 0 !important;
     width: 100% !important;
-    height: 70px !important;
-    background-color: #0b132b !important; /* Premium Dark Navy */
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.15) !important;
-    z-index: 99999 !important;
+    height: 75px !important;
+    background-color: #0b132b !important; /* Professional Dark Navy Blue */
+    border-bottom: 2px solid #00b4d8 !important; /* Premium Cyan Accent Strip */
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.3) !important;
+    z-index: 99999 !important; /* Guarantees it stays above all animations/content */
     display: flex !important;
     justify-content: space-between !important;
     align-items: center !important;
-    padding: 0 4% !important;
+    padding: 0 6% !important;
     box-sizing: border-box !important;
+    font-family: 'Poppins', sans-serif !important;
 }
 
-/* Safe spacing adjustment so content doesn't hide under the navigation bar */
+/* Base Body Spacer preventing content from clipping underneath header */
 body {
-    margin-top: 70px !important; 
+    padding-top: 75px !important; 
 }
 
-/* Logo layout rules */
+/* Left Branding Logo Layout */
 .portfolio-navbar .logo-area {
     display: flex !important;
     align-items: center !important;
-    gap: 12px !important;
+    gap: 14px !important;
     text-decoration: none !important;
 }
 
 .portfolio-navbar .logo-area img {
-    height: 40px !important;
+    height: 44px !important;
     width: auto !important;
     display: block !important;
 }
@@ -117,17 +43,17 @@ body {
 .portfolio-navbar .logo-title {
     color: #ffffff !important;
     font-weight: 700 !important;
-    font-size: 1.2rem !important;
+    font-size: 1.3rem !important;
     white-space: nowrap !important;
-    font-family: 'Poppins', sans-serif !important;
+    letter-spacing: 0.5px;
 }
 
-/* Exact requested structural link matrix */
+/* Rearranged Horizontal Menu Grid (Projects and Gallery Removed) */
 .portfolio-nav-links {
     display: flex !important;
     flex-direction: row !important;
     align-items: center !important;
-    gap: 18px !important; /* Balances look for long multi-page headers */
+    gap: 28px !important; /* Balanced gap spacing */
     list-style: none !important;
     margin: 0 !important;
     padding: 0 !important;
@@ -142,187 +68,40 @@ body {
 .portfolio-nav-links a {
     color: #ffffff !important;
     text-decoration: none !important;
-    font-size: 0.85rem !important;
+    font-size: 0.95rem !important;
     font-weight: 500 !important;
-    white-space: nowrap !important; /* Strictly prevents text from dropping to a second line */
-    transition: color 0.25s ease !important;
-    font-family: 'Poppins', sans-serif !important;
+    white-space: nowrap !important; /* CRITICAL: Stops menu items from breaking into two lines */
+    transition: all 0.25s ease-in-out !important;
+    position: relative;
 }
 
-/* Hover and Active highlights */
+/* Hover and Active State Colors */
 .portfolio-nav-links a:hover,
 .portfolio-nav-links a.active {
-    color: #00b4d8 !important; /* Vibrant Cyan */
-    font-weight: 700 !important;
+    color: #00b4d8 !important; /* High-contrast Cyan Highlight */
+}
+
+/* Underline Animation Effect on Link Hover */
+.portfolio-nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -6px;
+    left: 0;
+    background-color: #00b4d8;
+    transition: width 0.25s ease-in-out;
+}
+.portfolio-nav-links a:hover::after,
+.portfolio-nav-links a.active::after {
+    width: 100%;
 }
 
 /* ==========================================================================
-   ISOLATED PORTFOLIO NAVIGATION MASTER ARCHITECTURE
-   ========================================================================== */
-
-/* Main Navigation Container */
-.portfolio-navbar {
-    position: fixed !important;
-    top: 0 !important;
-    left: 0 !important;
-    width: 100% !important;
-    height: 70px !important;            /* Standard professional tracking height */
-    background-color: #0b132b !important; /* Premium Dark Navy Match */
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2) !important;
-    z-index: 99999 !important;          /* Layers it smoothly on top of graphics */
-    display: flex !important;
-    justify-content: space-between !important;
-    align-items: center !important;
-    padding: 0 5% !important;
-    box-sizing: border-box !important;
-    font-family: 'Poppins', sans-serif !important;
-}
-
-/* Master spacing compensation preventing content from clipping underneath */
-body {
-    padding-top: 70px !important;       /* Matches header height exactly */
-}
-
-/* Brand Branding Layout Area */
-.portfolio-navbar .logo-area {
-    display: flex !important;
-    align-items: center !important;
-    gap: 12px !important;
-    text-decoration: none !important;
-}
-
-.portfolio-navbar .logo-area img {
-    height: 42px !important;            /* Constrains your logo image safely within the bar */
-    width: auto !important;
-    display: block !important;
-}
-
-.portfolio-navbar .logo-title {
-    color: #ffffff !important;
-    font-weight: 700 !important;
-    font-size: 1.2rem !important;
-    white-space: nowrap !important;
-}
-
-/* Horizontal Link Menu Matrix (Fixes the text drops and link wraps) */
-.portfolio-nav-links {
-    display: flex !important;
-    flex-direction: row !important;
-    align-items: center !important;
-    gap: 20px !important;               /* Perfect balance for multi-page headers */
-    list-style: none !important;
-    margin: 0 !important;
-    padding: 0 !important;
-}
-
-.portfolio-nav-links li {
-    display: block !important;
-    margin: 0 !important;
-    padding: 0 !important;
-}
-
-.portfolio-nav-links a {
-    color: #ffffff !important;
-    text-decoration: none !important;
-    font-size: 0.85rem !important;
-    font-weight: 500 !important;
-    white-space: nowrap !important;     /* CRITICAL: Stops menu items from breaking into 2 lines */
-    transition: color 0.25s ease !important;
-}
-
-/* Interactive Brand Hover Feedback State & Active Indicators */
-.portfolio-nav-links a:hover,
-.portfolio-nav-links a.active {
-    color: #00b4d8 !important;          /* Vibrant Neon Accent Blue Match */
-    font-weight: 700 !important;
-}
-
-/* ==========================================================================
-   UNIFIED PORTFOLIO NAVIGATION MASTER ARCHITECTURE & COLORS
-   ========================================================================== */
-
-/* Main Multi-Page Top Navigation Bar Element */
-.portfolio-navbar {
-    position: fixed !important;
-    top: 0 !important;
-    left: 0 !important;
-    width: 100% !important;
-    height: 70px !important;            /* Consistent height metric */
-    background-color: #0b132b !important; /* Premium Dark Navy */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2) !important;
-    z-index: 99999 !important;          /* Floats cleanly on top of all section graphics */
-    display: flex !important;
-    justify-content: space-between !important;
-    align-items: center !important;
-    padding: 0 5% !important;
-    box-sizing: border-box !important;
-    font-family: 'Poppins', sans-serif !important;
-}
-
-/* Base Body Spacing to prevent content from hiding underneath */
-body {
-    padding-top: 70px !important;       
-}
-
-/* Branding Brand Area Layout */
-.portfolio-navbar .logo-area {
-    display: flex !important;
-    align-items: center !important;
-    gap: 12px !important;
-    text-decoration: none !important;
-}
-
-.portfolio-navbar .logo-area img {
-    height: 42px !important;            
-    width: auto !important;
-    display: block !important;
-}
-
-.portfolio-navbar .logo-title {
-    color: #ffffff !important;
-    font-weight: 700 !important;
-    font-size: 1.25rem !important;
-    white-space: nowrap !important;
-}
-
-/* Complete 9-Link Structural Horizontal Matrix Grid */
-.portfolio-nav-links {
-    display: flex !important;
-    flex-direction: row !important;
-    align-items: center !important;
-    gap: 22px !important;               /* Exact structural tracking gap */
-    list-style: none !important;
-    margin: 0 !important;
-    padding: 0 !important;
-}
-
-.portfolio-nav-links li {
-    display: block !important;
-    margin: 0 !important;
-    padding: 0 !important;
-}
-
-.portfolio-nav-links a {
-    color: #ffffff !important;
-    text-decoration: none !important;
-    font-size: 0.88rem !important;
-    font-weight: 500 !important;
-    white-space: nowrap !important;     /* Prevents layout dropping on tight screen sizes */
-    transition: color 0.25s ease-in-out !important;
-}
-
-/* Interaction Hover Responses and Active Pages States */
-.portfolio-nav-links a:hover,
-.portfolio-nav-links a.active {
-    color: #00b4d8 !important;          /* Uniform Premium Cyan */
-    font-weight: 700 !important;
-}
-
-/* ==========================================================================
-   UNIFIED SUB-PAGE CONTENT THEME MATRICES
+   SUB-PAGE MATRICES (For publications.html, patents.html, books.html)
    ========================================================================== */
 .sub-page-body {
-    background-color: #0b132b !important; /* Forces uniform canvas backdrop matching */
+    background-color: #0b132b !important; /* Prevents light theme fallback backgrounds */
     color: #ffffff !important;
     font-family: 'Poppins', sans-serif !important;
     margin: 0;
@@ -330,226 +109,57 @@ body {
 
 .sub-page-container {
     padding: 60px 6% !important;
-    max-width: 1200px;
+    max-width: 1100px;
     margin: 0 auto;
 }
 
 .sub-page-header {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
     font-weight: 700;
-    color: #00b4d8;                     /* Accent Colored Primary Headers */
-    margin-bottom: 8px;
+    color: #00b4d8;
+    margin-bottom: 10px;
 }
 
 .sub-page-desc {
     color: #a0aec0;
-    font-size: 1rem;
-    margin-bottom: 40px;
+    font-size: 1.05rem;
+    margin-bottom: 50px;
 }
 
-/* Unified Display Cards for Publications, Patents, and Books */
+/* Cards Presentation Layer */
 .portfolio-data-card {
     background: rgba(255, 255, 255, 0.03) !important;
     border: 1px solid rgba(255, 255, 255, 0.08) !important;
-    border-left: 4px solid #00b4d8 !important; /* Accent anchor tag column */
-    padding: 25px;
-    margin-bottom: 25px;
+    border-left: 4px solid #00b4d8 !important;
+    padding: 30px;
+    margin-bottom: 30px;
     border-radius: 8px;
-    transition: transform 0.2s ease, background 0.2s ease !important;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.25s ease, background-color 0.25s ease !important;
 }
 
 .portfolio-data-card:hover {
-    transform: translateY(-3px);
+    transform: translateY(-4px);
     background: rgba(255, 255, 255, 0.06) !important;
+    box-shadow: 0 6px 20px rgba(0, 180, 216, 0.15);
 }
 
 .portfolio-card-tag {
     display: inline-block;
     background: #00b4d8;
     color: #0b132b;
-    padding: 4px 10px;
+    padding: 5px 12px;
     font-size: 0.75rem;
     font-weight: 700;
     border-radius: 4px;
-    margin-bottom: 12px;
-    text-transform: uppercase;
-}
-
-.portfolio-card-title {
-    margin: 0 0 10px 0;
-    font-size: 1.35rem;
-    color: #ffffff;
-    line-height: 1.4;
-}
-
-.portfolio-card-meta {
-    margin: 0;
-    color: #cbd5e1;
-    font-size: 0.95rem;
-    line-height: 1.6;
-}
-
-.portfolio-card-btn {
-    display: inline-block;
-    margin-top: 15px;
-    background-color: transparent;
-    color: #00b4d8;
-    border: 1px solid #00b4d8;
-    text-decoration: none;
-    padding: 6px 14px;
-    border-radius: 4px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    transition: background 0.2s, color 0.2s;
-}
-
-.portfolio-card-btn:hover {
-    background-color: #00b4d8;
-    color: #0b132b;
-}
-
-/* ==========================================================================
-   UNIFIED PORTFOLIO NAVIGATION MASTER ARCHITECTURE & PROFESSIONAL BLUE THEME
-   ========================================================================== */
-
-/* Isolated Navigation Bar Styles */
-.portfolio-navbar {
-    position: fixed !important;
-    top: 0 !important;
-    left: 0 !important;
-    width: 100% !important;
-    height: 70px !important;
-    background-color: #0b132b !important; /* Premium Dark Blue */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2) !important;
-    z-index: 99999 !important;
-    display: flex !important;
-    justify-content: space-between !important;
-    align-items: center !important;
-    padding: 0 5% !important;
-    box-sizing: border-box !important;
-    font-family: 'Poppins', sans-serif !important;
-}
-
-body {
-    padding-top: 70px !important; /* Prevents content from hiding under the fixed bar */
-}
-
-/* Logo Layout Rules */
-.portfolio-navbar .logo-area {
-    display: flex !important;
-    align-items: center !important;
-    gap: 12px !important;
-    text-decoration: none !important;
-}
-
-.portfolio-navbar .logo-area img {
-    height: 42px !important;
-    width: auto !important;
-    display: block !important;
-}
-
-.portfolio-navbar .logo-title {
-    color: #ffffff !important;
-    font-weight: 700 !important;
-    font-size: 1.25rem !important;
-    white-space: nowrap !important;
-}
-
-/* Exact Rearranged Menu Matrix (Projects & Gallery Completely Removed) */
-.portfolio-nav-links {
-    display: flex !important;
-    flex-direction: row !important;
-    align-items: center !important;
-    gap: 24px !important; /* Spacious gap for the streamlined header */
-    list-style: none !important;
-    margin: 0 !important;
-    padding: 0 !important;
-}
-
-.portfolio-nav-links li {
-    display: block !important;
-    margin: 0 !important;
-    padding: 0 !important;
-}
-
-.portfolio-nav-links a {
-    color: #ffffff !important;
-    text-decoration: none !important;
-    font-size: 0.9rem !important;
-    font-weight: 500 !important;
-    white-space: nowrap !important; /* Stops text from wrapping or dropping to a second line */
-    transition: color 0.25s ease-in-out !important;
-}
-
-/* Hover and Active Indicators */
-.portfolio-nav-links a:hover,
-.portfolio-nav-links a.active {
-    color: #00b4d8 !important; /* Vibrant Cyan Accent */
-    font-weight: 700 !important;
-}
-
-/* ==========================================================================
-   UNIFIED INNER-PAGE BACKGROUNDS AND TYPOGRAPHY MIGRATION
-   ========================================================================== */
-.sub-page-body {
-    background-color: #0b132b !important; /* Enforces executive dark-blue canvas match */
-    color: #ffffff !important;
-    font-family: 'Poppins', sans-serif !important;
-    margin: 0;
-}
-
-.sub-page-container {
-    padding: 60px 6% !important;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.sub-page-header {
-    font-size: 2.2rem;
-    font-weight: 700;
-    color: #00b4d8; /* Cyan accent header title */
-    margin-bottom: 8px;
-    letter-spacing: -0.5px;
-}
-
-.sub-page-desc {
-    color: #a0aec0;
-    font-size: 1rem;
-    margin-bottom: 40px;
-}
-
-/* Clear Professional Data Layout Components */
-.portfolio-data-card {
-    background: rgba(255, 255, 255, 0.03) !important;
-    border: 1px solid rgba(255, 255, 255, 0.07) !important;
-    border-left: 4px solid #00b4d8 !important; /* Blue brand vertical border line */
-    padding: 25px;
-    margin-bottom: 25px;
-    border-radius: 8px;
-    transition: transform 0.2s ease, background 0.2s ease !important;
-}
-
-.portfolio-data-card:hover {
-    transform: translateY(-3px);
-    background: rgba(255, 255, 255, 0.06) !important;
-}
-
-.portfolio-card-tag {
-    display: inline-block;
-    background: #00b4d8;
-    color: #0b132b;
-    padding: 4px 10px;
-    font-size: 0.75rem;
-    font-weight: 700;
-    border-radius: 4px;
-    margin-bottom: 12px;
+    margin-bottom: 15px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
 
 .portfolio-card-title {
-    margin: 0 0 10px 0;
-    font-size: 1.35rem;
+    margin: 0 0 12px 0;
+    font-size: 1.4rem;
     color: #ffffff;
     line-height: 1.4;
 }
@@ -557,22 +167,22 @@ body {
 .portfolio-card-meta {
     margin: 0;
     color: #cbd5e1;
-    font-size: 0.95rem;
+    font-size: 1rem;
     line-height: 1.6;
 }
 
 .portfolio-card-btn {
     display: inline-block;
-    margin-top: 15px;
+    margin-top: 20px;
     background-color: transparent;
     color: #00b4d8;
     border: 1px solid #00b4d8;
     text-decoration: none;
-    padding: 6px 14px;
+    padding: 8px 18px;
     border-radius: 4px;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     font-weight: 600;
-    transition: background 0.2s, color 0.2s;
+    transition: all 0.2s ease;
 }
 
 .portfolio-card-btn:hover {
@@ -583,6 +193,5 @@ body {
 .books-grid { 
     display: grid; 
     grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); 
-    gap: 25px; 
-    margin-top: 10px; 
+    gap: 30px; 
 }
