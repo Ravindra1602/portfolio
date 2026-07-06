@@ -155,3 +155,84 @@ body {
     color: #00b4d8 !important; /* Vibrant Cyan */
     font-weight: 700 !important;
 }
+
+/* ==========================================================================
+   ISOLATED PORTFOLIO NAVIGATION MASTER ARCHITECTURE
+   ========================================================================== */
+
+/* Main Navigation Container */
+.portfolio-navbar {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 70px !important;            /* Standard professional tracking height */
+    background-color: #0b132b !important; /* Premium Dark Navy Match */
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2) !important;
+    z-index: 99999 !important;          /* Layers it smoothly on top of graphics */
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 0 5% !important;
+    box-sizing: border-box !important;
+    font-family: 'Poppins', sans-serif !important;
+}
+
+/* Master spacing compensation preventing content from clipping underneath */
+body {
+    padding-top: 70px !important;       /* Matches header height exactly */
+}
+
+/* Brand Branding Layout Area */
+.portfolio-navbar .logo-area {
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    text-decoration: none !important;
+}
+
+.portfolio-navbar .logo-area img {
+    height: 42px !important;            /* Constrains your logo image safely within the bar */
+    width: auto !important;
+    display: block !important;
+}
+
+.portfolio-navbar .logo-title {
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    font-size: 1.2rem !important;
+    white-space: nowrap !important;
+}
+
+/* Horizontal Link Menu Matrix (Fixes the text drops and link wraps) */
+.portfolio-nav-links {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 20px !important;               /* Perfect balance for multi-page headers */
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.portfolio-nav-links li {
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.portfolio-nav-links a {
+    color: #ffffff !important;
+    text-decoration: none !important;
+    font-size: 0.85rem !important;
+    font-weight: 500 !important;
+    white-space: nowrap !important;     /* CRITICAL: Stops menu items from breaking into 2 lines */
+    transition: color 0.25s ease !important;
+}
+
+/* Interactive Brand Hover Feedback State & Active Indicators */
+.portfolio-nav-links a:hover,
+.portfolio-nav-links a.active {
+    color: #00b4d8 !important;          /* Vibrant Neon Accent Blue Match */
+    font-weight: 700 !important;
+}
