@@ -6,7 +6,7 @@
     width: 100%;
     height: 70px;               /* Standard professional height */
     z-index: 9999;              /* Layers it smoothly on top of graphics */
-    background-color: #ffffff;  /* Solid fallback so content doesn't bleed through */
+    background-color: #0b132b;  /* Adjusted to match your dark-blue brand look */
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08); /* Clean shadow depth split */
     display: flex;
     justify-content: space-between;
@@ -20,8 +20,60 @@ body {
     padding-top: 70px;          /* Matches navbar height exactly */
 }
 
-/* Highlighting the active link indicator if applicable */
+/* BRAND LOGO AREA FIX */
+.navbar .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    height: 100%;
+}
+
+.navbar .logo img {
+    height: 40px;               /* Constrains your logo image within the 70px bar */
+    width: auto;
+    display: block;
+}
+
+.navbar .logo-text {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.15rem;
+    white-space: nowrap;
+}
+
+/* FLEX BOX NAV LINKS MATRIX (The missing link fixing your layout bug) */
+.nav-links {
+    display: flex;
+    align-items: center;        /* Keeps your text perfectly centered vertically */
+    gap: 18px;                  /* Balances spacing evenly between items */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: 100%;               /* Forces tracking within the parent layout container */
+}
+
+.nav-links li {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.88rem;         /* Slightly optimized for longer multi-page link sets */
+    font-weight: 500;
+    white-space: nowrap;        /* CRITICAL: Prevents links from breaking into two lines */
+    transition: color 0.25s ease;
+}
+
+.nav-links a:hover {
+    color: #00b4d8;            /* Smooth hover effect matching your brand accent blue */
+}
+
+/* Highlighting the active link indicator for your dedicated pages */
 .nav-links a.active {
-    color: #0066cc;             /* Adjust hex code to fit your brand colors */
+    color: #00b4d8;            
     font-weight: 700;
 }
