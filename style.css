@@ -24,6 +24,7 @@
 /* Base Body Spacer preventing content from clipping underneath header */
 body {
     padding-top: 75px !important; 
+    text-align: left !important; /* Forces global clean left alignment for layout stability */
 }
 
 /* Left Branding Logo Layout */
@@ -46,6 +47,7 @@ body {
     font-size: 1.3rem !important;
     white-space: nowrap !important;
     letter-spacing: 0.5px;
+    text-align: left !important;
 }
 
 /* Rearranged Horizontal Menu Grid (Projects and Gallery Removed) */
@@ -63,6 +65,7 @@ body {
     display: block !important;
     margin: 0 !important;
     padding: 0 !important;
+    text-align: left !important;
 }
 
 .portfolio-nav-links a {
@@ -73,6 +76,7 @@ body {
     white-space: nowrap !important; /* CRITICAL: Stops menu items from breaking into two lines */
     transition: all 0.25s ease-in-out !important;
     position: relative;
+    text-align: left !important;
 }
 
 /* Hover and Active State Colors */
@@ -105,12 +109,14 @@ body {
     color: #ffffff !important;
     font-family: 'Poppins', sans-serif !important;
     margin: 0;
+    text-align: left !important;
 }
 
 .sub-page-container {
     padding: 60px 6% !important;
     max-width: 1100px;
     margin: 0 auto;
+    text-align: left !important;
 }
 
 .sub-page-header {
@@ -118,12 +124,14 @@ body {
     font-weight: 700;
     color: #00b4d8;
     margin-bottom: 10px;
+    text-align: left !important; /* Ensures headers align neatly with descriptions */
 }
 
 .sub-page-desc {
     color: #a0aec0;
     font-size: 1.05rem;
     margin-bottom: 50px;
+    text-align: left !important;
 }
 
 /* Cards Presentation Layer */
@@ -136,6 +144,7 @@ body {
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     transition: transform 0.25s ease, background-color 0.25s ease !important;
+    text-align: left !important; /* Guarantees card content stays nested left */
 }
 
 .portfolio-data-card:hover {
@@ -155,6 +164,7 @@ body {
     margin-bottom: 15px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    text-align: center !important; /* Keeps internal tag labels centered inside the badge */
 }
 
 .portfolio-card-title {
@@ -162,6 +172,7 @@ body {
     font-size: 1.4rem;
     color: #ffffff;
     line-height: 1.4;
+    text-align: left !important;
 }
 
 .portfolio-card-meta {
@@ -169,6 +180,8 @@ body {
     color: #cbd5e1;
     font-size: 1rem;
     line-height: 1.6;
+    text-align: justify !important; /* Justifies meta descriptions inside cards for clean text margins */
+    text-justify: inter-word;
 }
 
 .portfolio-card-btn {
@@ -183,6 +196,7 @@ body {
     font-size: 0.9rem;
     font-weight: 600;
     transition: all 0.2s ease;
+    text-align: center !important; /* Keeps link button text neatly centered inside its border box */
 }
 
 .portfolio-card-btn:hover {
@@ -194,4 +208,5 @@ body {
     display: grid; 
     grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); 
     gap: 30px; 
+    text-align: left !important;
 }
